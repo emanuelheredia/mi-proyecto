@@ -1,0 +1,1013 @@
+@import "_colores";
+@import "_font-size";
+@import "_dimensiones";
+@import "_mixin";
+
+* {
+  box-sizing: 100%;
+  margin: 0;
+  padding: 10; }
+
+/*each para tamaño de titulos*/
+@each $size, $px in $title {
+  .titulo-#{$size}{
+    font-size: $px;
+  }
+} 
+@each $tipo, $color in $colores-letras{
+  .color--#{$tipo}{
+    color:$color; 
+  }
+}    
+body {
+  width: 100%;
+  background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-textura-madera-vintage_55716-1138.jpg?size=626&ext=jpg);
+  background-size: contain;}
+
+  /* Bloque Encabezado */
+.encabezado {
+  background: $color-fondo;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+/* etilos nav bootstrap */
+.encabezado__audio {
+  position: absolute;
+  right: 0px;
+  opacity: 0.5; }
+
+.encabezado__logo {
+  width: 180px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 20px;
+  z-index: 1; }
+
+.encabezado__navegador {
+  margin-top: 20px;
+  font-size: $alto-letra;
+  background: $color-fondo;
+  background-size: 100%;
+  height: 100%; }
+
+.container-fluid {
+  background: $color-fondo;
+  background-size: 100vw;
+  border-style: none;
+  justify-content: space-around;
+  height: 100%; }
+
+#navbarNavDropdown {
+  flex-direction: column;
+  align-items: stretch; }
+
+.imgHome {
+  height: 100%; }
+
+li {
+  padding: 10px; }
+/* alineacion del navegador superior e inferior */
+  nav ul li {
+  width: 100%;
+  font-weight: 600;
+  display: inline-block;
+  /* margin-bottom: 20px;
+    margin-top: 30px; */
+  position: relative; }
+
+/* submenú */
+ul ul {
+  position: absolute;
+  display: none;
+  background: $color-fondo;
+  background-size: 100vw;
+  list-style: none;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px; }
+
+/* submenú formato */
+ul ul li a {
+  display: block;
+  text-decoration: none;
+  color: #693402;
+  font-family: 'Josefin Sans', sans-serif; }
+
+/* submenú margenes*/
+ul ul li {
+  margin-bottom: 15px;
+  margin-top: 15px; }
+
+/* submenú display hover*/
+ul li:hover ul {
+  display: block;
+  z-index: 3; }
+
+/* submenú */
+nav ul ul li:hover {
+  color: white; }
+
+.navbar-collapse {
+  height: 100%; }
+
+/* transformación opción menú hover */
+nav li a {
+  transition: 1s; }
+
+nav li a:hover {
+  color: white;
+  font-size: 20px; }
+/* estilo titulo principal y animación */
+#titulo {
+  font-size: 100px;
+  font-family: 'Playball', cursive;
+  font-style: italic;
+  font-weight: lighter;
+  color: #f75205;
+  padding-top: 0px;
+  text-shadow: black 0 -3px;
+  animation-name: titulo_promo;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  letter-spacing: 7px; }
+
+h1{
+  color: #f79305;
+  font-size: $alto-letra*3.5;
+  text-shadow: rgb(26, 25, 25) 0 -4px 2px;
+  padding: 1rem; }
+h5 {
+  color: #f79305;
+  font-size: $alto-letra*2;
+  text-shadow: rgb(26, 25, 25) 0 -4px 2px; }
+
+/* alinecion carousel img principal */
+#carouselExampleCaptions {
+  width: 100%;
+  height: 100vh;
+  margin: 0px; }
+
+.carousel-inner {
+  height: 100%; }
+
+.carousel-item {
+  height: 100%; }
+
+.imgPrincipal {
+  width: 100%;
+  height: auto; }
+
+.imgSecundarias {
+  border-radius: 10%;
+  width: 20vw;
+  height: 40vh;
+  margin: 10px; }
+
+.imgCabañas {
+  border-radius: 30%;
+  width: 250px;
+  height: 130px;
+  margin: 20px;
+  opacity: 1;
+  transition: 2s;
+  border-style: solid; }
+
+/* transformación img cabañas hover */
+.imgCabañas:hover {
+  height: 250px;
+  width: 350px ; }
+
+/* alineción elementos "cabañas" */
+.gridCabañas section div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+/* fondo y sobmbra elementos "cabañas" */
+.gridCabañas section {
+  width: 100%;
+  box-shadow: 2px 2px 5px #999;
+  background-image: url(https://previews.123rf.com/images/peekeedee1/peekeedee11605/peekeedee1160500263/55947057-fondo-de-la-pared-de-madera-o-de-la-textura-patr%C3%B3n-natural-de-la-pared-de-madera-de-textura-de-fondo.jpg);
+  background-size: cover; }
+
+/* estilo parrafos "Cabañas */
+.gridCabañas section p {
+  color: black;
+  text-shadow: none; }
+
+.gridCabañas section h2 {
+  font-size: 50px; }
+
+/* alineación img cabañas home */
+.flexImagHome {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+/* alineación y margenes secciones home */
+#seccion1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+    div {
+      display: inline;
+      position: absolute; } }
+
+#seccion1 div img {
+  width: 80vw;
+  height: 65vh;
+  border-radius: 50%;
+  justify-content: center; }
+
+/* Bloque Sección Nosotros  */  
+.nosotros {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%; }
+
+.nosotros__titulo {
+  color: #f7d305;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: $alto-letra*3;
+  text-shadow: black 0 -2px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 1.5; }
+
+.nosotros__parrafo {
+  @extend .parrafo }
+
+/* Bloque Promociones  */
+.promociones {
+  width: 100%; }
+
+.promociones__titulo{
+  color: #f7d305;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: $alto-letra*3;
+  text-shadow: black 0 -2px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.promociones__img{
+  width: 100%;
+  height: 40vh;
+  animation-name: promo;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;}
+
+.promociones__enlace {
+  display: inline;
+  text-align: center;
+  width: auto;
+  // color: white;
+  font-family: 'Exo', sans-serif;
+  text-shadow: black 0 -2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px; }  
+
+  /* Bloque Comentario  */
+.comentario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px; }
+
+.comentario__textarea {
+  width: 50vw;
+  height: 20vh;
+  background: $color-fondo;
+  color: #693402;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px; }
+
+.comentario__input{
+  @include boton (10vw)};
+.comentario__input:hover{
+  opacity: .7;
+}
+  /* Bloque Pie de Página */
+.piePagina {
+  background-color: black;
+  margin-top: 30px;
+  padding-top: 5px; }
+
+.navegador{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.navegador__item{
+  list-style: none;}
+
+.navegador__enlace {
+  width: 100%;
+  height: 100%;
+  color: #693402;
+  font-family: 'Josefin Sans', sans-serif;
+  list-style: none;
+  font-weight: bolder;
+  text-decoration: none;}
+
+.formSuscripcion{
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: larger; }
+.piePagina__tarjetas{
+  display: inline; }
+
+.tarjetas{
+  display: inline;
+  color: white;
+  margin-left: 1rem;
+  font-size: 50px;
+  text-align: left;
+  padding: 0;
+  margin: 0; }
+
+.piePagina__redes{
+  display: inline; }
+.piePagina__suscripción{
+  text-align: center;
+}
+
+ /* Bloque iconos redes */
+.redes {
+  width: 100%;
+  text-align: end;
+  height: $alto-letra;
+  margin-right: $alto-letra*4;
+  display: inline;
+  position: absolute;
+  right: 5px; }
+
+.redes__enlaces{
+  color: white;
+  font-size: 50px; }
+
+  /* posición icono teléfono fijado */
+.redes__enlaces--telefonoHome {
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  font-size: 50px;
+  animation-name: promo;
+  animation-iteration-count: infinite;
+  animation-duration: 1s; }
+
+.piePagina__derechos{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: $alto-letra*.7;
+  color: white; }
+  
+/* estilos titulos secundarios */
+.tituloSecundario {
+  color: #f7d305;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: $alto-letra*3;
+  text-shadow: black 0 -2px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 2rem; }
+
+.parrafo {
+  display: inline;
+  text-align: justify;
+  width: 100%;
+  color: white;
+  font-family: 'Exo', sans-serif;
+  text-shadow: black 0 -2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px; }
+
+/* animación img promo  */
+@keyframes promo {
+  0% {
+    transform: skewX(0deg); }
+  25% {
+    transform: skewX(10deg); }
+  50% {
+    transform: skewX(0deg); }
+  75% {
+    transform: skewX(-10deg); }
+  100% {
+    transform: skewX(0deg); } }
+
+/* animación titulo promo */
+@keyframes titulo_promo {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: .5; }
+  50% {
+    opacity: .3; }
+  75% {
+    opacity: .5; }
+  100% {
+    opacity: 1; } }
+
+#principal .promociones h2 {
+  animation-name: titulo_promo;
+  animation-iteration-count: infinite;
+  animation-duration: 1s; }
+
+.servicios {
+  /* margin-right: 60px;
+    margin-left: 60px; */
+  display: flex;
+  justify-content: flex-start; }
+
+.iconoServicios {
+  font-size: 60px;
+  display: inline-block; }
+
+/* display descripcion servicios */
+.alineacionServicios {
+  display: inline-block; }
+
+.descripcionServicios {
+  width: 80%;
+  color: white;
+  font-family: 'Exo', sans-serif;
+  text-shadow: black 0 -2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  text-align: justify; }
+
+.telefono {
+  display: block;
+  margin: auto; }
+
+/* estilo y tamaño icono de teléfono "Ubicación" */
+.iconoTelefono {
+  font-size: 70px;
+  color: white;
+  text-align: center; }
+
+fieldset {
+  background: $color-fondo;
+  border-style: solid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+  padding-left: 100px; }
+
+.simuladorTarifas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+    h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #693402; }
+    .opcion {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #693402;
+      padding: 0px; } 
+    .enviarTarifa {
+      display: inline-block;
+      width: 150px;
+      height: auto;
+      color: white;
+      background: #693d00;
+      background: linear-gradient(90deg, #693d00 0%, #af350c 47%, #381d01 100%);
+      display: block;
+      font-size: 20px;
+      padding: 10px;
+      border: outset #a54d2a;
+      width: 13vw;
+      margin-top: 20px;
+      color: white; }}
+      form{
+        width: 70%;
+        padding: 0px;
+      }
+// .simuladorTarifas h3 {
+//   font-size: 25px;
+//   margin-bottom: 20px;
+//   color: #693402; }
+
+.form-select {
+  background: $color-fondo;
+  border-style: solid;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #693402;
+  border: outset #a54d2a;
+  width: 40vw; }
+
+// .simuladorTarifas .opcion {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   color: #693402;
+//   padding: 0px; }
+
+/* estilo y alineacion boton enviar "Tarifa" */
+// .simuladorTarifas .enviarTarifa {
+//   display: inline-block;
+//   width: 150px;
+//   height: auto;
+//   color: white;
+//   background: #693d00;
+//   background: linear-gradient(90deg, #693d00 0%, #af350c 47%, #381d01 100%);
+//   display: block;
+//   font-size: 20px;
+//   padding: 10px;
+//   border: outset #a54d2a;
+//   width: 13vw;
+//   margin-top: 20px;
+//   color: white; }
+
+.precioSimulado {
+  color: #693402;
+  text-shadow: black 0 -2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  border: solid 2px;
+  padding: 10px;
+  margin-top: 20px; }
+
+/* formato formulario "contacto */
+
+.parrafo .contacto {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: #693402;
+  text-shadow: none;
+  font-weight: bold; }
+
+/* margenes input "contacto */
+/* Bloque opciones formulario "contacto" */
+.datos {
+  display: block;
+  margin-bottom: 1rem;
+  }
+
+.datos__titulo{
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #693402;
+  font-weight: lighter; 
+}
+
+.datos__input {
+  background: $color-fondo;
+  background-size: 100vw; }
+
+/* dimension textarea formulario "contacto */
+.datos__textarea {
+  background: $color-fondo;
+  background-size: 100vw;
+  width: 100%;
+  height: 30vh;
+  margin-top: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #693402;
+  opacity: .7; }
+
+/* dimension y estilo boton formulario "contacto" */
+.contacto__boton {
+  @include boton };
+.contacto__boton:hover {
+  opacity: .7;
+}
+
+/* focus input ingreso datos contacto */
+.datos__input:focus{
+  transform: scale(1.5);}
+
+/* aplicando flex "Servicios" */
+.flexServicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 300px; }
+
+/* aplicando flex "Tarifas" */
+.flexTarifa {
+  padding: 20px 130px 20px 130px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%; }
+
+/* aplicando flex "Tarifas" */
+.flexOpcion {
+  display: inline;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 550px;
+  margin: 0px;
+  padding: 0; }
+
+.flexOpcion input {
+  border: outset #a54d2a; }
+
+/* aplicando flex "Tarifas" */
+.opcion div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flexNavegador li {
+  width: auto; }
+
+  /* Bloque elementos "ubicación"  */
+.ubicación {
+  padding: 40px;
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns: 1fr 1fr; }
+
+.ubicación__mapa {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%; }
+.ubicacion__texto{
+  width: 100%;
+  height: 100%;
+}
+.alineaciónDescripción{
+  display: flex;
+  margin: 1rem;
+}
+.parrafo--ubicación{
+  @include parrafo;
+  margin: 20px;
+  padding: 1rem;
+}
+.ubicacion__enlace{
+  display: inline;
+  text-align: center;
+  width: auto;
+  color: white;
+  font-family: 'Exo', sans-serif;
+  text-shadow: black 0 -2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px; 
+}
+  /* Bloque elementos "ubicación"  */
+.texto{
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  width: 100%;
+}
+.texto__titulo{
+  color: #f7d305;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  text-shadow: black 0 -2px;
+  text-align: center;
+}
+/* tamaño iconos auto-bus "ubicacion" */
+.texto__icono {
+  color: white;
+  font-size: 60px;
+  margin: 20px; }
+
+.icono_enlaces{
+  color: white;
+  font-size: 30px;
+}
+.borde{
+  border-radius: 5%;
+  width: 100%;
+  height: auto;
+}
+/* alineación formulario contacto */
+.contacto {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: repeat(3, 50px) 100px 30px 30px;
+  width: 50vw;
+  height: auto;
+  justify-content: center;
+  justify-items: stretch;
+  align-content: stretch;
+  border-radius: 5%;
+    button {
+      justify-self: self-end;
+      align-self: stretch; } }
+
+.flexContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+    .formularioAlineción {
+      display: inline-block; 
+        label {
+          display: flex;
+          flex-direction: column; }
+        .parrafo {
+          display: inline; }}
+        }
+
+        /* agrupación y alineación mediante Grid cuerpo del Home */
+#principal {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  "imagen imagen imagen imagen"
+  "nosotros nosotros relleno1 relleno1"
+  "relleno2 relleno2 cabañas cabañas"
+  "video video relleno3 relleno3"
+  "promo promo promo promo"
+  "comentario comentario comentario comentario";
+  grid-template-rows: 90vh auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: flex-end; }
+
+h1{
+  font-family: 'Otomanopee One', sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;}
+
+#principal .container-fluid {
+  grid-area: imagen;
+  padding: 0;
+  height: 100%; }
+
+.nosotros {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  grid-area: nosotros;
+  padding: 20px;
+  margin-top: 40px; }
+.nosotrosRelleno{
+  grid-area: relleno1;
+  height: auto;
+  img{
+    width: 100%;
+    height: max-content;
+    padding-bottom: 60px;
+  }
+}
+#principal .seccion3 {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: cabañas;
+  padding: 20px;
+  padding-bottom: 0; }
+.cabañasRelleno{
+  grid-area: relleno2;
+  height: auto;
+  img{
+    width: 100%;
+    height: max-content;
+    padding: 150px;
+    padding-bottom: 30px;
+  }
+}
+#principal .promociones {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: promo; }
+
+/* Bloque Sección video  */
+.video {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: video;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  align-items: center;
+  padding-bottom: 0; }
+
+  .videoRelleno{
+    grid-area: relleno3;
+    height: auto;
+    img{
+      width: 100%;
+      height: max-content;
+      padding: 80px;
+      padding-bottom: 30px;
+    }  
+  }
+  .video__titulo {
+  color: #f7d305;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: $alto-letra*3;
+  text-shadow: black 0 -2px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 2rem; }
+
+.video__reproductor {
+  display: block;
+  margin: auto;
+  width: 45vw;
+  height: 50vh; }
+
+.comentario {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 50px; */
+  grid-area: comentario; }
+
+/* agrupación y alineación mediante Grid elementos "Cabañas" */
+/* .gridCabañas{
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-areas: 
+        "cabaña1 cabaña1 cabaña2 cabaña2"
+        "cabaña1 cabaña1 cabaña2 cabaña2"
+        "cabaña3 cabaña3 cabaña4 cabaña4"    
+        "cabaña3 cabaña3 cabaña4 cabaña4"    
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto; 
+}*/
+/* formato y acordeon "Cabañas" */
+.gridCabañas {
+  padding: 2rem;
+   /* Aplicando for en scss */
+  @for $i from 1 through 4{
+    .seccion#{$i} {
+        border: solid 2px burlywood;
+        border-radius: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-area: cabaña1;
+        margin: 0;
+    }
+  }
+}
+.accordion-item, .fondoMenuTarifa {
+  background-image: url(https://previews.123rf.com/images/peekeedee1/peekeedee11605/peekeedee1160500263/55947057-fondo-de-la-pared-de-madera-o-de-la-textura-patr%C3%B3n-natural-de-la-pared-de-madera-de-textura-de-fondo.jpg);
+  background-size: contain; }
+
+.accordion-button {
+  flex-direction: column;
+  align-items: center;
+  background: $color-fondo;
+  font-size: 25px;
+  color: #693402; }
+
+.accordion-header {
+  text-align: center; }
+
+.accordion-collapse {
+  height: 100%; }
+
+.accordion-collapse .imgCentrado {
+  height: 100%;
+  text-align: center; }
+
+.accordion-body p {
+  @include parrafo (black, white 0 -2px) };
+
+  /* aplicando media querie Home  */
+@media (max-width: 1024px) {
+  #principal {
+    width: 100%; 
+    display: flex;
+    flex-direction: column ;}
+  .encabezado {
+    display: flex;
+    flex-direction: column; }
+  .flexNavegador {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 70%; }
+  #principal .video {
+    margin-top: 80px; }
+  .imgCabañas:hover{
+      width: 250px;
+    }
+    .contacto{
+      width: 80vw;}
+    h1{
+      font-size: $alto-letra*2; }
+  .ubicación{
+    display: flex;
+    flex-direction: column;}
+  }
+@media (max-width: 780px) {
+  #principal, .gridCabañas {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; }
+  #principal .seccion6 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: .7rem; }
+  .flexNavegador {
+    flex-direction: row;
+    padding: 0; }
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 220px ; }
+  .encabezado__audio {
+    display: none; }
+  #principal .seccion {
+    margin-bottom: 0px; }
+  #principal #seccion1 {
+    width: 200px;
+    height: 280px;
+    margin-top: 20px; }
+  #principal .video iframe{
+    width: 90%;}
+  #principal .promociones .parrafo {
+    font-size: 1rem; }
+  .servicios {
+    /* margin-right: 60px;
+    margin-left: 60px; */
+    display: flex;
+    justify-content: center; }
+  .comentario{
+    margin-top: 20px;}
+  .redes__enlaces, .tarjetas, .redes__enlaces--telefonoHome{
+    font-size: $alto-letra*2;}
+  .contacto{
+    width: 100vw;}
+  h1{
+    font-size: $alto-letra*1.5; }
+  .simuladorTarifas form{
+    align-items: center;
+  }
+  .opcion{
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  #principal .video {
+    border-top: none;
+    border-bottom: none; }
+  #principal .seccion3 {
+    border-left: none; }
+  #principal .nosotros {
+    border-right: none; } }

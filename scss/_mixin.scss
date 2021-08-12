@@ -1,0 +1,23 @@
+@mixin parrafo ($color-parrafo:white, $sombra:black 0 -2px) {
+    display: inline;
+    text-align: justify;
+    width: 100%;
+    color: $color-parrafo;
+    font-family: 'Exo', sans-serif;
+    text-shadow: $sombra;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px; }
+
+@mixin boton ($width:20vw){
+    width: $width;
+    height: auto;
+    margin-top: 20px;
+    color: white;
+    border: solid 1px yellow;
+    border-radius: 5%;
+    background: #693d00;
+    background: linear-gradient(90deg, #693d00 0%, #af350c 47%, #381d01 100%);
+    display: inline-block;
+    font-size: 1rem; 
+}
