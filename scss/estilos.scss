@@ -4,7 +4,7 @@
 @import "_mixin";
 
 * {
-  box-sizing: 100%;
+  box-sizing: border-box;
   margin: 0;
   padding: 10; }
 
@@ -144,7 +144,8 @@ h1{
   color: #f79305;
   font-size: $alto-letra*3.5;
   text-shadow: rgb(26, 25, 25) 0 -4px 2px;
-  padding: 1rem; }
+  padding: 1rem;
+  margin: 2rem; }
 h5 {
   color: #f79305;
   font-size: $alto-letra*2;
@@ -277,7 +278,6 @@ h5 {
   // color: white;
   font-family: 'Exo', sans-serif;
   text-shadow: black 0 -2px;
-  margin-bottom: 20px;
   margin-top: 20px;
   font-size: 20px; }  
 
@@ -286,8 +286,7 @@ h5 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 150px;
-  margin-bottom: 20px; }
+  margin-top: 150px; }
 
 .comentario__textarea {
   width: 50vw;
@@ -306,7 +305,6 @@ h5 {
   /* Bloque Pie de Página */
 .piePagina {
   background-color: black;
-  margin-top: 30px;
   padding-top: 5px; }
 
 .navegador{
@@ -757,6 +755,7 @@ fieldset {
   grid-template-rows: 90vh auto auto auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  row-gap: 80px;
   align-items: flex-end; }
 
 h1{
@@ -769,11 +768,13 @@ h1{
   justify-content: center;
   z-index: 2;}
 
-#principal .container-fluid {
+#principal {
   grid-area: imagen;
-  padding: 0;
-  height: 100%; }
-
+  .container-fluid {
+    grid-area: imagen;
+    padding: 0;
+    height: 100%; }
+}
 .nosotros {
   width: auto;
   height: auto;
@@ -925,9 +926,11 @@ h1{
   /* aplicando media querie Home  */
 @media (max-width: 1024px) {
   #principal {
-    width: 100%; 
+    width: 100%;
+    height: auto; 
     display: flex;
-    flex-direction: column ;}
+    flex-direction: column ;
+  align-items: center;}
   .encabezado {
     display: flex;
     flex-direction: column; }
@@ -970,7 +973,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 220px ; }
+    height: 100% ; }
   .encabezado__audio {
     display: none; }
   #principal .seccion {
@@ -1013,8 +1016,11 @@ h1{
     align-items: center;
     width: 100%;
   }
+  .nosotrosRelleno, .cabañasRelleno, .videoRelleno{
+    display: none;
+  }
 }
-@media (max-width: 480px) {
+@media (max-width: 582px) {
   #principal .video {
     border-top: none;
     border-bottom: none; }
@@ -1032,6 +1038,9 @@ h1{
         width: auto;
       }
 } 
+h1{
+  font-size:1rem ;
+}
   .flexTarifa{
     padding: 0;
     margin: 0;
