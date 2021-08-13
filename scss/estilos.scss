@@ -996,11 +996,22 @@ h1{
     width: 100vw;}
   h1{
     font-size: $alto-letra*1.5; }
-  .simuladorTarifas form{
-    align-items: center;
-  }
+  .simuladorTarifas {
+          form{
+            align-items: center;
+          }
+          h3{
+            font-size: 1rem;
+            width: auto;
+          }          
+}
+.flexTarifa{
+  padding: 0;
+  margin: 0;
+}
   .opcion{
     align-items: center;
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -1010,4 +1021,19 @@ h1{
   #principal .seccion3 {
     border-left: none; }
   #principal .nosotros {
-    border-right: none; } }
+    border-right: none; }
+    .simuladorTarifas {
+      form{
+        align-items: center;
+      }
+      h3{
+        font-size: 1rem;
+        width: 100%;
+        width: auto;
+      }
+} 
+  .flexTarifa{
+    padding: 0;
+    margin: 0;
+  }
+}
