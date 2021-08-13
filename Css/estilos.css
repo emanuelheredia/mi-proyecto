@@ -961,7 +961,8 @@ h1 {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    row-gap: 20px; }
   .encabezado {
     display: flex;
     flex-direction: column; }
@@ -991,7 +992,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; }
+    height: auto;
+    row-gap: 0px; }
   #principal .seccion6 {
     margin-top: 20px;
     margin-bottom: 0;
@@ -1023,6 +1025,8 @@ h1 {
     justify-content: center; }
   .comentario {
     margin-top: 20px; }
+  .comentario__textarea {
+    font-size: .5rem; }
   .redes__enlaces, .tarjetas, .redes__enlaces--telefonoHome {
     font-size: 2rem; }
   .contacto {
@@ -1041,7 +1045,9 @@ h1 {
     align-items: center;
     width: 100%; }
   .nosotrosRelleno, .cabañasRelleno, .videoRelleno {
-    display: none; } }
+    display: none; }
+  .nosotros__parrafo {
+    font-size: 1rem; } }
 
 @media (max-width: 582px) {
   #principal .video {
@@ -1057,8 +1063,22 @@ h1 {
     font-size: 1rem;
     width: 100%;
     width: auto; }
+  .simuladorTarifas #principal {
+    row-gap: 0px; }
+  .comentario__input {
+    width: 20vw; }
+  .comentario__textarea {
+    font-size: .5rem; }
   h1 {
     font-size: 1rem; }
   .flexTarifa {
     padding: 0;
-    margin: 0; } }
+    margin: 0; }
+  .nosotros__parrafo {
+    font-size: .5rem; } }
+
+@media (max-width: 320px) {
+  body {
+    width: 112%; }
+  .comentario__input {
+    width: auto; } }
