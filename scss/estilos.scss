@@ -20,7 +20,7 @@
   }
 }    
 body {
-  width: 100%;
+  width: 100vw;
   background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-textura-madera-vintage_55716-1138.jpg?size=626&ext=jpg);
   background-size: contain;}
 
@@ -320,6 +320,7 @@ h5 {
   height: 100%;
   color: #693402;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
   list-style: none;
   font-weight: bolder;
   text-decoration: none;}
@@ -327,8 +328,7 @@ h5 {
 .formSuscripcion{
   display: inline-block;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  font-size: larger; }
+  color: white; }
 .piePagina__tarjetas{
   display: inline; }
 
@@ -355,21 +355,28 @@ h5 {
   margin-right: $alto-letra*4;
   display: inline;
   position: absolute;
-  right: 5px; }
+  right: -50px; }
 
 .redes__enlaces{
   color: white;
   font-size: 50px; }
+  
+.redes__enlaces--linkedin{
+  font-size: 25px;
+  padding-left: 10px;
+  color: white;
+}
 
   /* posición icono teléfono fijado */
 .redes__enlaces--telefonoHome {
   position: fixed;
-  right: 5px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 100px;
   font-size: 50px;
   animation-name: promo;
   animation-iteration-count: infinite;
-  animation-duration: 1s; }
+  animation-duration: 1s;
+  color:white; }
 
 .piePagina__derechos{
   text-align: center;
@@ -800,7 +807,8 @@ h1{
   justify-content: center;
   grid-area: cabañas;
   padding: 20px;
-  padding-bottom: 0; }
+  margin-right: 2rem;
+  padding-bottom: 0;}
 .cabañasRelleno{
   grid-area: relleno2;
   height: auto;
@@ -930,10 +938,14 @@ h1{
     height: auto; 
     display: flex;
     flex-direction: column ;
-  align-items: center;}
+    align-items: center;}
   .encabezado {
     display: flex;
     flex-direction: column; }
+  .seccion3{
+    padding: 0;
+    margin: 0;
+  }
   .flexNavegador {
     width: 100%;
     height: 100%;
@@ -941,6 +953,9 @@ h1{
     flex-direction: row;
     justify-content: center;
     font-size: 70%; }
+  .navegador{
+    justify-content: space-around;
+  }
   #principal .video {
     margin-top: 80px; }
   .imgCabañas:hover{
@@ -953,7 +968,11 @@ h1{
   .ubicación{
     display: flex;
     flex-direction: column;}
+  .comentario__input{
+    margin-bottom: 20px;
   }
+  }
+
 @media (max-width: 780px) {
   #principal, .gridCabañas {
     margin: 0;
@@ -993,20 +1012,41 @@ h1{
     justify-content: center; }
   .comentario{
     margin-top: 20px;}
-  .redes__enlaces, .tarjetas, .redes__enlaces--telefonoHome{
-    font-size: $alto-letra*2;}
+  .redes__enlaces, .tarjetas{
+    font-size: $alto-letra*2;
+    width: 100% ;}
+  .redes__enlaces--linkedin{
+    font-size: 15px;
+    padding-left: 5px; }
   .contacto{
-    width: 100vw;}
+    width: 90vw;}
   h1{
     font-size: $alto-letra*1.5; }
   .simuladorTarifas {
           form{
             align-items: center;
+            width: 80%;
           }
           h3{
             font-size: 1rem;
             width: auto;
-          }          
+          } 
+          .form-select{
+            width: 70%;
+            font-size: .7rem;
+          }
+          .enviarTarifa{
+            font-size: .7rem;
+          }         
+}
+.redes__enlaces--telefonoHome{
+  font-size: 2rem;
+}
+.precioSimulado{
+  font-size: 1rem;
+}
+.tituloSecundario{
+  font-size: 1rem;
 }
 .flexTarifa{
   padding: 0;
@@ -1015,9 +1055,18 @@ h1{
   .opcion{
     align-items: center;
     width: 100%;
+    .flexOpcion{
+      width: 100%;
+    }
   }
   .nosotrosRelleno, .cabañasRelleno, .videoRelleno{
     display: none;
+  }
+  .datos__titulo{
+    font-size: 1rem;
+  }
+  .datos__textarea{
+    font-size: 1rem;
   }
 }
 @media (max-width: 582px) {
@@ -1037,7 +1086,21 @@ h1{
         width: 100%;
         width: auto;
       }
+      .enviarTarifa{
+        font-size: .5rem;
+        padding: 0;
+      }   
 } 
+.comentario__textarea{
+  font-size: .5rem;
+}
+.comentario__input{
+  font-size: .5rem;
+  padding: 0;
+}
+.nosotros__parrafo{
+  font-size: 1rem;
+}
 h1{
   font-size:1rem ;
 }
@@ -1045,4 +1108,94 @@ h1{
     padding: 0;
     margin: 0;
   }
+  .navegador{
+    justify-content: space-around;
+  }
+  .servicios{
+    justify-content: flex-start;
+    padding-left: 30px;
+    .parrafo{
+      font-size: 1rem;
+      padding-right: 30px;
+    }
+  }
 }
+@media (max-width: 480px) {
+  body {
+    width: 100vw; }
+  .alineaciónDescripción{
+    display: flex;
+    flex-direction: column;
+  }
+  .piePagina {
+    width: 100%; }
+  .navegador{
+    padding-left: 0;
+    width: 100%;
+    justify-content: center;
+    .navegador__enlace{
+      width: 100%;
+      padding: 0px;
+      font-size: .7rem;
+    }
+  }
+  .parrafo--ubicación, h3.parrafo{
+    font-size: 1rem;
+  }
+  .contacto__boton{
+    font-size: .7rem;
+  }
+  .accordion-body p{
+    font-size: 1rem;
+  }
+  .accordion-button{
+    font-size: 1.5rem;
+  }
+  }
+  @media (max-width: 350px) {
+    body {
+      width: 100vw; }
+    .navegador{
+      width: 100%;
+      justify-content: center;
+    .navegador__enlace{
+      width: 100%;
+      padding: 0px;
+    }
+    .navegador__item{
+      width: 70%;
+      font-size: .3rem;
+      padding: 0px;
+      margin: 0;
+    }
+    }
+    .accordion-button{
+      font-size: 1rem;
+    }
+    .imgCabañas{
+      width: 180px;
+    }
+    .formSuscripcion{
+      height: 30px;
+      font-size: .7rem;
+      font-weight: lighter;
+    }
+    .redes__enlaces{
+      font-size: 2px;
+    } 
+    .redes__enlaces, .tarjetas{
+      font-size: $alto-letra*.7;
+      width: 100% ;}
+    .contacto__boton{
+      font-size: .5rem;
+      padding: 0;
+    }
+    .piePagina__derechos{
+      font-size: .5rem;
+    }
+    .redes__enlaces--telefonoHome{
+      font-size: 1rem;
+    }
+    }
+    
+    
