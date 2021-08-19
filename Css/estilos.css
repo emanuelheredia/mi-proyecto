@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 10; }
+  padding: 0; }
 
 /*each para tamaño de titulos*/
 .titulo-size-xs {
@@ -27,7 +27,6 @@
   color: #693402; }
 
 body {
-  width: 100vw;
   background-image: url(https://img.freepik.com/foto-gratis/viejo-fondo-textura-madera-vintage_55716-1138.jpg?size=626&ext=jpg);
   background-size: contain; }
 
@@ -87,8 +86,6 @@ nav ul li {
   width: 100%;
   font-weight: 600;
   display: inline-block;
-  /* margin-bottom: 20px;
-    margin-top: 30px; */
   position: relative; }
 
 /* submenú */
@@ -127,14 +124,20 @@ nav ul ul li:hover {
 .navbar-collapse {
   height: 100%; }
 
-/* transformación opción menú hover */
-nav li a {
+.navegador__item:hover a {
+  color: white;
+  font-size: 20px;
   transition: 1s; }
 
-nav li a:hover {
-  color: white;
-  font-size: 20px; }
+.nav-link {
+  color: #693402; }
 
+.nav-item:hover .nav-link {
+  color: white !important;
+  font-size: 20px;
+  transition: 1s; }
+
+/* Se aplicó !important para pisar css bootstrap */
 /* estilo titulo principal y animación */
 #titulo {
   font-size: 100px;
@@ -386,7 +389,7 @@ h5 {
 /* posición icono teléfono fijado */
 .redes__enlaces--telefonoHome {
   position: fixed;
-  right: 10px;
+  right: 25px;
   bottom: 100px;
   font-size: 50px;
   animation-name: promo;
@@ -540,7 +543,6 @@ form {
   border: outset #a54d2a;
   width: 40vw; }
 
-/* estilo y alineacion boton enviar "Tarifa" */
 .precioSimulado {
   color: #693402;
   text-shadow: black 0 -2px;
@@ -758,7 +760,7 @@ form {
   grid-template-rows: 90vh auto auto auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  row-gap: 80px;
+  row-gap: 60px;
   align-items: flex-end; }
 
 h1 {
@@ -793,7 +795,10 @@ h1 {
   .nosotrosRelleno img {
     width: 100%;
     height: max-content;
-    padding-bottom: 60px; }
+    padding-bottom: 60px;
+    padding-right: 40px;
+    opacity: .8;
+    border-radius: 30%; }
 
 #principal .seccion3 {
   width: auto;
@@ -811,9 +816,10 @@ h1 {
   height: auto; }
   .cabañasRelleno img {
     width: 100%;
-    height: max-content;
-    padding: 150px;
-    padding-bottom: 30px; }
+    height: 100%;
+    padding: 40px;
+    padding-bottom: 0;
+    opacity: .8; }
 
 #principal .promociones {
   width: 100%;
@@ -843,7 +849,8 @@ h1 {
     width: 100%;
     height: max-content;
     padding: 80px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    opacity: .8; }
 
 .video__titulo {
   color: #f7d305;
@@ -868,22 +875,6 @@ h1 {
   /* padding-top: 50px; */
   grid-area: comentario; }
 
-/* agrupación y alineación mediante Grid elementos "Cabañas" */
-/* .gridCabañas{
-    width: 100%;
-    height: auto;
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-    grid-template-areas: 
-        "cabaña1 cabaña1 cabaña2 cabaña2"
-        "cabaña1 cabaña1 cabaña2 cabaña2"
-        "cabaña3 cabaña3 cabaña4 cabaña4"    
-        "cabaña3 cabaña3 cabaña4 cabaña4"    
-        ;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto; 
-}*/
 /* formato y acordeon "Cabañas" */
 .gridCabañas {
   padding: 2rem;
@@ -968,7 +959,8 @@ h1 {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    row-gap: 30px; }
   .encabezado {
     display: flex;
     flex-direction: column; }
@@ -995,6 +987,9 @@ h1 {
   .ubicación {
     display: flex;
     flex-direction: column; }
+    .ubicación .ubicación__mapa {
+      margin: 0;
+      margin-bottom: 20px; }
   .comentario__input {
     margin-bottom: 20px; } }
 
@@ -1005,7 +1000,10 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; }
+    height: auto;
+    row-gap: 0px; }
+  #carouselExampleCaptions {
+    height: 75vh; }
   #principal .seccion6 {
     margin-top: 20px;
     margin-bottom: 0;
@@ -1045,6 +1043,9 @@ h1 {
     padding-left: 5px; }
   .contacto {
     width: 90vw; }
+  .flexContacto h2 {
+    font-size: 2rem;
+    padding: 1rem; }
   h1 {
     font-size: 1.5rem; }
   .simuladorTarifas form {
@@ -1058,6 +1059,8 @@ h1 {
     font-size: .7rem; }
   .simuladorTarifas .enviarTarifa {
     font-size: .7rem; }
+  .simuladorTarifas h2 {
+    font-size: 2rem; }
   .redes__enlaces--telefonoHome {
     font-size: 2rem; }
   .precioSimulado {
@@ -1112,14 +1115,15 @@ h1 {
     justify-content: space-around; }
   .servicios {
     justify-content: flex-start;
-    padding-left: 30px; }
+    padding-left: 5rem;
+    padding-right: 2rem; }
     .servicios .parrafo, .servicios .nosotros__parrafo {
       font-size: 1rem;
-      padding-right: 30px; } }
+      padding-right: 30px; }
+  #carouselExampleCaptions {
+    height: 50vh; } }
 
 @media (max-width: 480px) {
-  body {
-    width: 100vw; }
   .alineaciónDescripción {
     display: flex;
     flex-direction: column; }
@@ -1140,11 +1144,14 @@ h1 {
   .accordion-body p {
     font-size: 1rem; }
   .accordion-button {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  h2.precioSimulado {
+    font-size: 1.3rem;
+    text-shadow: none; }
+  .iconoTelefono {
+    font-size: 50px; } }
 
 @media (max-width: 350px) {
-  body {
-    width: 100vw; }
   .navegador {
     width: 100%;
     justify-content: center; }
@@ -1160,6 +1167,9 @@ h1 {
     font-size: 1rem; }
   .imgCabañas {
     width: 180px; }
+  .imgCabañas:hover {
+    width: 200px;
+    height: 200px; }
   .formSuscripcion {
     height: 30px;
     font-size: .7rem;
@@ -1175,4 +1185,10 @@ h1 {
   .piePagina__derechos {
     font-size: .5rem; }
   .redes__enlaces--telefonoHome {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .nosotros__parrafo {
+    font-size: .8rem; }
+  .nosotros__titulo, .video__titulo, .promociones__titulo {
+    font-size: 2rem; }
+  .servicios .parrafo, .servicios .nosotros__parrafo {
+    font-size: .8rem; } }
