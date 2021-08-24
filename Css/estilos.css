@@ -1080,7 +1080,11 @@ h1 {
   .datos__titulo {
     font-size: 1rem; }
   .datos__textarea {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .promociones {
+    margin-top: 50px; }
+  #principal .seccion3 {
+    margin: 0; } }
 
 @media (max-width: 582px) {
   #principal .video {
@@ -1121,12 +1125,16 @@ h1 {
       font-size: 1rem;
       padding-right: 30px; }
   #carouselExampleCaptions {
-    height: 50vh; } }
+    height: 50vh; }
+  #principal .seccion3 {
+    margin: 2rem; } }
 
 @media (max-width: 480px) {
   .alineaciónDescripción {
     display: flex;
     flex-direction: column; }
+  .promociones__img {
+    height: 20vh; }
   .piePagina {
     width: 100%; }
   .navegador {
@@ -1149,7 +1157,9 @@ h1 {
     font-size: 1.3rem;
     text-shadow: none; }
   .iconoTelefono {
-    font-size: 50px; } }
+    font-size: 50px; }
+  .nosotros__parrafo {
+    font-size: .6rem; } }
 
 @media (max-width: 350px) {
   .navegador {
