@@ -154,7 +154,7 @@ nav ul ul li:hover {
 
 h1 {
   color: #f79305;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-shadow: #1a1919 0 -4px 2px;
   padding: 1rem;
   margin: 2rem; }
@@ -359,7 +359,7 @@ h5 {
   font-size: 50px;
   text-align: left;
   padding: 0;
-  margin: 0; }
+  margin: 0 0 0 10px; }
 
 .piePagina__redes {
   display: inline; }
@@ -964,6 +964,8 @@ h1 {
   .encabezado {
     display: flex;
     flex-direction: column; }
+    .encabezado .encabezado__navegador {
+      margin-bottom: 10px; }
   .seccion3 {
     padding: 0;
     margin: 0; }
@@ -983,7 +985,7 @@ h1 {
   .contacto {
     width: 80vw; }
   h1 {
-    font-size: 2rem; }
+    font-size: 3rem; }
   .ubicación {
     display: flex;
     flex-direction: column; }
@@ -991,12 +993,14 @@ h1 {
       margin: 0;
       margin-bottom: 20px; }
   .comentario__input {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .datos__input:focus {
+    transform: scale(1.2); } }
 
 @media (max-width: 780px) {
   #principal, .gridCabañas {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1046,8 +1050,11 @@ h1 {
   .flexContacto h2 {
     font-size: 2rem;
     padding: 1rem; }
+  .flexContacto div .tituloSecundario {
+    margin: 2rem;
+    padding: 0; }
   h1 {
-    font-size: 1.5rem; }
+    font-size: 2rem; }
   .simuladorTarifas form {
     align-items: center;
     width: 80%; }
@@ -1066,7 +1073,7 @@ h1 {
   .precioSimulado {
     font-size: 1rem; }
   .tituloSecundario {
-    font-size: 1rem; }
+    font-size: 2rem; }
   .flexTarifa {
     padding: 0;
     margin: 0; }
@@ -1102,7 +1109,9 @@ h1 {
     width: auto; }
   .simuladorTarifas .enviarTarifa {
     font-size: .5rem;
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    height: 30px; }
   .comentario__textarea {
     font-size: .5rem; }
   .comentario__input {
@@ -1111,7 +1120,9 @@ h1 {
   .nosotros__parrafo {
     font-size: 1rem; }
   h1 {
-    font-size: 1rem; }
+    font-size: 1.5rem; }
+  .imgCabañas:hover {
+    width: 300px; }
   .flexTarifa {
     padding: 0;
     margin: 0; }
@@ -1125,9 +1136,11 @@ h1 {
       font-size: 1rem;
       padding-right: 30px; }
   #carouselExampleCaptions {
-    height: 50vh; }
+    height: 60vh; }
   #principal .seccion3 {
-    margin: 2rem; } }
+    margin: 2rem; }
+  .contacto {
+    border-radius: 0; } }
 
 @media (max-width: 480px) {
   .alineaciónDescripción {
@@ -1145,6 +1158,8 @@ h1 {
       width: 100%;
       padding: 0px;
       font-size: .7rem; }
+  #carouselExampleCaptions {
+    height: 50vh; }
   .parrafo--ubicación, h3.parrafo, h3.nosotros__parrafo {
     font-size: 1rem; }
   .contacto__boton {
@@ -1159,9 +1174,17 @@ h1 {
   .iconoTelefono {
     font-size: 50px; }
   .nosotros__parrafo {
-    font-size: .6rem; } }
+    font-size: .6rem; }
+  .video iframe {
+    height: 250px; }
+  .servParrafo {
+    padding: 1rem; }
+  .flexTarifa {
+    border-radius: 0; }
+  .imgCabañas:hover {
+    width: 270px; } }
 
-@media (max-width: 350px) {
+@media (max-width: 387px) {
   .navegador {
     width: 100%;
     justify-content: center; }
@@ -1171,14 +1194,14 @@ h1 {
     .navegador .navegador__item {
       width: 70%;
       font-size: .3rem;
-      padding: 0px;
+      padding-left: 7px;
       margin: 0; }
   .accordion-button {
     font-size: 1rem; }
   .imgCabañas {
-    width: 180px; }
+    width: 80%; }
   .imgCabañas:hover {
-    width: 200px;
+    width: 225px;
     height: 200px; }
   .formSuscripcion {
     height: 30px;
@@ -1190,8 +1213,9 @@ h1 {
     font-size: 0.7rem;
     width: 100%; }
   .contacto__boton {
-    font-size: .5rem;
-    padding: 0; }
+    font-size: .7rem;
+    padding: 0;
+    height: 30px; }
   .piePagina__derechos {
     font-size: .5rem; }
   .redes__enlaces--telefonoHome {
@@ -1201,4 +1225,17 @@ h1 {
   .nosotros__titulo, .video__titulo, .promociones__titulo {
     font-size: 2rem; }
   .servicios .parrafo, .servicios .nosotros__parrafo {
-    font-size: .8rem; } }
+    font-size: .8rem; }
+  h1 {
+    font-size: 1.3rem; } }
+
+@media (max-width: 387px) {
+  h1 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-shadow: #1a1919 0 -2px 2px; }
+  .video iframe {
+    height: 170px; }
+  .seccion3 .carousel img {
+    height: 220px;
+    margin-bottom: 10px; } }
