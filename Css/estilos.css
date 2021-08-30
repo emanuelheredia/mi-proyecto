@@ -544,14 +544,14 @@ form {
   width: 40vw; }
 
 .precioSimulado {
-  color: #693402;
+  background-color: black;
+  color: #f7d305;
   text-shadow: black 0 -2px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
   font-size: 40px;
   border: solid 2px;
   padding: 10px;
-  margin-top: 20px; }
+  margin-top: 80px; }
 
 /* formato formulario "contacto */
 .parrafo .contacto, .nosotros__parrafo .contacto {
@@ -988,7 +988,8 @@ h1 {
     font-size: 3rem; }
   .ubicación {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-bottom: 0; }
     .ubicación .ubicación__mapa {
       margin: 0;
       margin-bottom: 20px; }
@@ -1050,9 +1051,13 @@ h1 {
   .flexContacto h2 {
     font-size: 2rem;
     padding: 1rem; }
-  .flexContacto div .tituloSecundario {
-    margin: 2rem;
-    padding: 0; }
+  .formularioAlineción {
+    margin-bottom: 2rem; }
+  .flexContacto {
+    margin-bottom: 2rem; }
+    .flexContacto .tituloSecundario {
+      margin: 0;
+      padding: 0; }
   h1 {
     font-size: 2rem; }
   .simuladorTarifas form {
@@ -1074,6 +1079,9 @@ h1 {
     font-size: 1rem; }
   .tituloSecundario {
     font-size: 2rem; }
+  .flexContacto span {
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
   .flexTarifa {
     padding: 0;
     margin: 0; }
@@ -1165,16 +1173,17 @@ h1 {
   .contacto__boton {
     font-size: .7rem; }
   .accordion-body p {
-    font-size: 1rem; }
+    font-size: .8rem; }
   .accordion-button {
     font-size: 1.5rem; }
   h2.precioSimulado {
     font-size: 1.3rem;
+    margin-top: 40px;
     text-shadow: none; }
   .iconoTelefono {
     font-size: 50px; }
   .nosotros__parrafo {
-    font-size: .6rem; }
+    font-size: .8rem; }
   .video iframe {
     height: 250px; }
   .servParrafo {
