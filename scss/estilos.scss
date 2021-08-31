@@ -269,9 +269,9 @@ h5 {
 .promociones__img{
   width: 100%;
   height: 40vh;
-  animation-name: promo;
+  animation-name: promo, traslacion;
   animation-iteration-count: infinite;
-  animation-duration: 2s;}
+  animation-duration: 4s;}
 
 .promociones__enlace {
   display: inline;
@@ -375,7 +375,7 @@ h5 {
   right: 25px;
   bottom: 100px;
   font-size: 50px;
-  animation-name: promo;
+  animation-name: animacion_tel;
   animation-iteration-count: infinite;
   animation-duration: 1s;
   color:white; }
@@ -407,8 +407,8 @@ h5 {
   margin-top: 20px;
   font-size: 20px; }
 
-/* animación img promo  */
-@keyframes promo {
+/* animación telefono fijo  */
+@keyframes animacion_tel {
   0% {
     transform: skewX(0deg); }
   25% {
@@ -432,6 +432,24 @@ h5 {
     opacity: .5; }
   100% {
     opacity: 1; } }
+
+@keyframes traslacion {
+  0% {
+    transform: translateX(-1500px); }
+  15% {
+    transform: translateX(0px) skewX(0deg); }
+  30% {
+    transform: translateX(0px) skewX(10deg); }
+  45% {
+    transform: translateX(0px) skewX(0deg); }
+  60% {
+    transform: translateX(0px) skewX(-10deg); }
+  75% {
+    transform: translateX(0px) skewX(0deg); }
+  90% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(1500px); }}
 
 #principal .promociones h2 {
   animation-name: titulo_promo;
