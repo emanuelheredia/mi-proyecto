@@ -774,7 +774,12 @@ form {
   margin: 0;
   width: 100%;
   display: grid;
-  grid-template-areas: "imagen imagen imagen imagen" "nosotros nosotros relleno1 relleno1" "relleno2 relleno2 cabañas cabañas" "video video relleno3 relleno3" "promo promo promo promo" "comentario comentario comentario comentario";
+  grid-template-areas: "imagen imagen imagen imagen"
+ "nosotros nosotros relleno1 relleno1"
+ "relleno2 relleno2 cabañas cabañas"
+ "video video relleno3 relleno3"
+ "promo promo promo promo"
+ "comentario comentario comentario comentario";
   grid-template-rows: 90vh auto auto auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
